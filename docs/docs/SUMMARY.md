@@ -1,0 +1,8 @@
+# Navigation outline for literate-nav
+
+- [Project Template]({{ able_workflow_copier_docs }})
+- [Module Template](index.md)
+  - [Quick Reference](quick-reference/)
+  - [Contributing](contributing/)
+- [ETL Template]({{ able_workflow_etl_copier_docs }})
+- [Rule Template]({{ able_workflow_rule_copier_docs }})
