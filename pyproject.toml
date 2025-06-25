@@ -161,6 +161,7 @@ python = "highest"
 extras_or_groups = ["dev"]
 
 [tool.pytest.ini_options]
+# These tests should be able to run in the dev environment
 testpaths = [
   "tests",
 ]

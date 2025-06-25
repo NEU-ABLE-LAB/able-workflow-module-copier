@@ -10,10 +10,10 @@ This template assumes that you have already created an [`able-workflow-copier`](
 
 ## Overview of ABLE Workflow copier templates
 
-- [`able-workflow-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-copier-dev)
-- [`able-workflow-module-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-module-copier-dev)
-- [`able-workflow-etl-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-etl-copier-dev)
-- [`able-workflow-rule-rule-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-rule-copier-dev)
+- [`able-workflow-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-copier)
+- [`able-workflow-module-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-module-copier)
+- [`able-workflow-etl-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-etl-copier)
+- [`able-workflow-rule-rule-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-rule-copier)
 
 ## Contributing
 
@@ -25,7 +25,7 @@ See the environment configuration [`able-workflow-copier`](https://github.com/NE
 
    ```bash
    # Create the environment (or update and prune if it already exists)
-   conda env update --name able-workflow-module-copier-dev --file environment-py312-dev.yaml --prune
+   conda env update --name able-workflow-module-copier --file environment-py312-dev.yaml --prune
    ```
 
    Alternatively, run the script `scripts/conda_update.sh`.
@@ -33,7 +33,7 @@ See the environment configuration [`able-workflow-copier`](https://github.com/NE
    Then activate
 
    ```bash
-   conda activate able-workflow-module-copier-dev
+   conda activate able-workflow-module-copier
    ```
 
    Configure the `able-workflow-copier` as the default python environment in the [Python Environments VSCode extension](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-python-envs).
