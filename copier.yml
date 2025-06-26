@@ -41,7 +41,7 @@ package_name:
   default: "{{ _external_data.parent_projec_tpl.package_name }}"
   when: False
 
-  _skip_if_exists:
+_skip_if_exists:
   - "{{ package_name }}{{ _copier_conf.sep }}{{ module_type }}{{ _copier_conf.sep }}__init__.py.jinja"
 
 _message_after_copy: |
