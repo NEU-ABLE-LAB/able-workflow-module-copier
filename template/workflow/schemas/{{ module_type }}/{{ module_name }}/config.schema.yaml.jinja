@@ -67,3 +67,11 @@ properties:
                     If this workflow is imported as a module into a parent
                     workflow, this path is relative to where the parent
                     workflow is run.
+            required:
+              - external
+              - interim
+              - processed
+              - raw
+        required: data_dirs
+    required: {{ module_name }}
+required: {{ module_type }}
