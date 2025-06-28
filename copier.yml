@@ -73,6 +73,14 @@ package_name:
 
 # Post-generation hooks
 _tasks:
+  # Add the rule to the workflow includes file
+  - command: [
+      "{{ _copier_python }}",
+      "{{ _copier_conf.src_path }}/tasks/append_smk_include.py",
+      "{{ smk_file_name }}"
+    ]
+  # TODO-copier-module Add config to includes
+
   # Run black, ruff, and snakefmt to format the code to fix line wraps
   # depending on length of generated code.
   - command: >-
@@ -84,13 +92,6 @@ _tasks:
   - command: >-
       snakefmt --config snakefmt.toml workflow/
     when: "{{ format_code }}"
-  # Add the rule to the workflow includes file
-  - command: [
-      "{{ _copier_python }}",
-      "{{ _copier_conf.src_path }}/tasks/append_smk_include.py",
-      "{{ smk_file_name }}"
-    ]
-  # TODO-copier-module Add config to includes
 
 _skip_if_exists:
   - "workflow/rules/includes.smk"
