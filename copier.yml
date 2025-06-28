@@ -41,6 +41,12 @@ module_description:
 
   # --- Post-configuration -----------------------------------------------------
 
+smk_file_name:
+  type: str
+  help: "The name of the smk file where the rule will be implemented."
+  default: "{{ module_type }}/{{ module_name }}.smk"
+  when: False
+
 _answers_file: >-
   ./copier-answers/module-{{ module_type }}-{{ module_name }}.yml
 
@@ -54,12 +60,17 @@ package_name:
   when: False
 
 # Post-generation hooks
-# _tasks:
-  # TODO-copier-module Add smk file to includes
+_tasks:
+  # Add the rule to the workflow includes file
+  - command: [
+      "{{ _copier_python }}",
+      "{{ _copier_conf.src_path }}/tasks/append_smk_include.py",
+      "{{ smk_file_name }}"
+    ]
   # TODO-copier-module Add config to includes
 
 _skip_if_exists:
-  - "{{ package_name }}{{ _copier_conf.sep }}{{ module_type }}{{ _copier_conf.sep }}__init__.py.jinja"
+  - "workflow/rules/includes.smk"
 
 _message_after_copy: |
   The {{ module_type }}/{{ module_name }} module has been created successfully.
