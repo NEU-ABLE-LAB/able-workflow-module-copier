@@ -15,15 +15,55 @@ properties:
                 type: string
                 description: >-
                     The path to the external data directory.
+
+                    The default value is `data/{{ module_name }}/external/`;
+                    however, this can be overridden to any other location
+                    on disk. Full paths are recommended for locations
+                    outside of the project directory.
+
+                    This is relative to where the `snakemake` command is run.
+                    If this workflow is imported as a module into a parent
+                    workflow, this path is relative to where the parent
+                    workflow is run.
               interim:
                 type: string
                 description: >-
                     The path to the interim data directory.
+
+                    The default value is `data/{{ module_name }}/interim/`;
+                    however, this can be overridden to any other location
+                    on disk. Full paths are recommended for locations
+                    outside of the project directory.
+
+                    This is relative to where the `snakemake` command is run.
+                    If this workflow is imported as a module into a parent
+                    workflow, this path is relative to where the parent
+                    workflow is run.
               processed:
                 type: string
                 description: >-
                     The path to the processed data directory.
+
+                    The default value is `data/{{ module_name }}/processed/`;
+                    however, this can be overridden to any other location
+                    on disk. Full paths are recommended for locations
+                    outside of the project directory.
+
+                    This is relative to where the `snakemake` command is run.
+                    If this workflow is imported as a module into a parent
+                    workflow, this path is relative to where the parent
+                    workflow is run.
               raw:
                 type: string
                 description: >-
                     The path to the raw data directory.
+
+                    The default value is `data/{{ module_name }}/raw/`;
+                    however, this can be overridden to any other location
+                    on disk. Full paths are recommended for locations
+                    outside of the project directory.
+
+                    This is relative to where the `snakemake` command is run.
+                    If this workflow is imported as a module into a parent
+                    workflow, this path is relative to where the parent
+                    workflow is run.

@@ -74,6 +74,7 @@ package_name:
 # --- Post-configuration -----------------------------------------------------
 
 _skip_if_exists:
+  - "workflow/profiles/default/config.yaml"
   - "workflow/rules/includes.smk"
 
 # Post-generation hooks
@@ -84,7 +85,12 @@ _tasks:
       "{{ _copier_conf.src_path }}/tasks/append_smk_include.py",
       "{{ smk_file_name }}"
     ]
-  # TODO-copier-module Add config to includes
+  # Add the config to the workflow profile
+  - command: [
+      "{{ _copier_python }}",
+      "{{ _copier_conf.src_path }}/tasks/append_config_include.py",
+      "config/{{ module_type }}/{{ module_name }}/config.yaml"
+    ]
 
   # Run black, ruff, and snakefmt to format the code to fix line wraps
   # depending on length of generated code.
