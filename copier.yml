@@ -51,7 +51,7 @@ format_code:
     after running `copier` in order for lint tests to pass.
   default: true
 
-  # --- Post-configuration -----------------------------------------------------
+# --- Calculated Variables ---------------------------------------------------
 
 smk_file_name:
   type: str
@@ -70,6 +70,11 @@ package_name:
   help: "The name of the project."
   default: "{{ _external_data.parent_projec_tpl.package_name }}"
   when: False
+
+# --- Post-configuration -----------------------------------------------------
+
+_skip_if_exists:
+  - "workflow/rules/includes.smk"
 
 # Post-generation hooks
 _tasks:
@@ -92,9 +97,6 @@ _tasks:
   - command: >-
       snakefmt --config snakefmt.toml workflow/
     when: "{{ format_code }}"
-
-_skip_if_exists:
-  - "workflow/rules/includes.smk"
 
 _message_after_copy: |
   The {{ module_type }}/{{ module_name }} module has been created successfully.
