@@ -1,0 +1,29 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+description: The main configuration schema the {{ module_type }} module named {{ module_name }}.
+
+properties:
+  {{  module_type }}:
+    type: object
+    properties:
+      {{ module_name }}:
+        type: object
+        properties:
+          data_dirs:
+            type: object
+            properties:
+              external:
+                type: string
+                description: >-
+                    The path to the external data directory.
+              interim:
+                type: string
+                description: >-
+                    The path to the interim data directory.
+              processed:
+                type: string
+                description: >-
+                    The path to the processed data directory.
+              raw:
+                type: string
+                description: >-
+                    The path to the raw data directory.

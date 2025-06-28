@@ -1,0 +1,13 @@
+# Configuring the {{ module_name_long }} {{ module_type }}
+
+This page describes how to configure the {{ module_name_long }} {{ module_type }}. The configuration is stored in the `config.yml` file in the `config/{{ module_type }}/{{ module_name }}` directory of this repo. If you importing this workflow as a module into your workflow, you can copy this file into your workflow's `config/{{ module_type }}/{{ module_name }}` directory and modify it as needed.
+
+## Configuration file schema
+
+{% raw %}
+``` yaml
+{%
+    include "../../../../worklow/schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml"
+%}
+```
+{% endraw %}

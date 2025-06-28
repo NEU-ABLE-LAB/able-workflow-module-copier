@@ -1,0 +1,19 @@
+{% if module_type == "datasets" -%}
+"""
+Each module (i.e., directory) within the datasets module
+(i.e., this directory) represents a distinct dataset processed
+by the ETL processes within this module.
+"""
+{% elif module_type == "features" -%}
+"""
+Each module (i.e., directory) within the features module
+(i.e., this directory) represents a distinct feature set
+processed by the ETL processes within this module.
+"""
+{% elif module_type == "models" -%}
+"""
+Each module (i.e., directory) within the models module
+(i.e., this directory) represents a distinct model
+processed by the ETL processes within this module.
+"""
+{%- endif %}

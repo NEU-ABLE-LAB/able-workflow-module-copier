@@ -27,6 +27,16 @@ module_name:
       The module name must start with a letter or underscore and can only contain letters, numbers, and underscores.
     {% endif %}
 
+module_name_long:
+  type: str
+  help: "The long form human-readable name of the module to be created."
+  default: "{{ module_name | replace('_', ' ') | title }}"
+
+module_description:
+  type: str
+  help: "A short description of the module to be created."
+  default: "A {{ module_type }} module for {{ module_name_long }}."
+
   # --- Post-configuration -----------------------------------------------------
 
 _answers_file: >-
@@ -40,6 +50,11 @@ package_name:
   help: "The name of the project."
   default: "{{ _external_data.parent_projec_tpl.package_name }}"
   when: False
+
+# Post-generation hooks
+_tasks:
+  # TODO-copier-module Add smk file to includes
+  # TODO-copier-module Add config to includes
 
 _skip_if_exists:
   - "{{ package_name }}{{ _copier_conf.sep }}{{ module_type }}{{ _copier_conf.sep }}__init__.py.jinja"
