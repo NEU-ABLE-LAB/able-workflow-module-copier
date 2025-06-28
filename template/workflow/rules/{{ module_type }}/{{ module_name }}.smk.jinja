@@ -9,7 +9,7 @@ rule {{ module_type }}_{{ module_name }}_all:
     input:
         # TODO: Define input files if needed. All inputs should be named.
         readme="data/README.md",
-    output:
+    # output:
         # `_all` rules do not produce any output files directly,
         # instead the `input` in this rule requests the output
         # from other rules.
