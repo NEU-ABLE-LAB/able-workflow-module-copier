@@ -52,7 +52,7 @@ package_name:
   when: False
 
 # Post-generation hooks
-_tasks:
+# _tasks:
   # TODO-copier-module Add smk file to includes
   # TODO-copier-module Add config to includes
 
