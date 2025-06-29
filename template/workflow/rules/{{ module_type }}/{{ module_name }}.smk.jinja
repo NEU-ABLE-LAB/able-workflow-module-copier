@@ -1,0 +1,23 @@
+if (
+    "{{ module_type }}" in config and
+    "{{ module_name }}" in config["{{ module_type }}"]
+):
+    validate(config, WORKFLOW_BASE / "schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml")
+
+rule {{ module_type }}_{{ module_name }}_all:
+    """
+    This rule will run the entire {{ module_name }} workflow
+    to generate the {{ module_name_long }} {{ module_type }}.
+
+    input:
+        Description of the input files required for this rule.
+    """
+    input:
+        # TODO: Define input files if needed. All inputs should be named.
+        readme="data/README.md",
+    # output:
+        # `_all` rules do not produce any output files directly,
+        # instead the `input` in this rule requests the output
+        # from other rules.
+    # wildcards:
+    # TODO: Add wildcards if needed. All wildcards should be named.

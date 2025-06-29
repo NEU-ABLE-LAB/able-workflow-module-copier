@@ -1,0 +1,8 @@
+# See workflow/schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml for the schema description.
+{{ module_type }}:
+  {{ module_name }}:
+    data_dirs:
+        external: "data/{{ module_name }}/external"
+        interim: "data/{{ module_name }}/interim"
+        processed: "data/{{ module_name }}/processed"
+        raw: "data/{{ module_name }}/raw"
