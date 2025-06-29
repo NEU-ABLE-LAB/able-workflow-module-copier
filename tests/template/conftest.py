@@ -146,7 +146,7 @@ _example_ids = [ex.name for ex in EXAMPLES]
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-@pytest.fixture(scope="session", params=EXAMPLES, ids=_example_ids)
+@pytest.fixture(params=EXAMPLES, ids=_example_ids)
 def rendered(request):
     """Render an example and yield (project_dir, example_name)."""
     example: Example = request.param
