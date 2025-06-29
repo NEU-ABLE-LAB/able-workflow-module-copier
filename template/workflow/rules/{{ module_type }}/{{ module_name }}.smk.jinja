@@ -2,7 +2,7 @@ if (
     "{{ module_type }}" in config and
     "{{ module_name }}" in config["{{ module_type }}"]
 ):
-    validate(config, "schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml")
+    validate(config, WORKFLOW_BASE / "schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml")
 
 rule {{ module_type }}_{{ module_name }}_all:
     """

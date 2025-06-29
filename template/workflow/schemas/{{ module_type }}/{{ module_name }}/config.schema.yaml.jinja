@@ -72,6 +72,9 @@ properties:
               - interim
               - processed
               - raw
-        required: data_dirs
-    required: {{ module_name }}
-required: {{ module_type }}
+        required:
+          - data_dirs
+    required:
+      - {{ module_name }}
+required:
+  - {{ module_type }}

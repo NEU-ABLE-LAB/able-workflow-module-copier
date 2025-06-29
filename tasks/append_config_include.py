@@ -68,7 +68,7 @@ def main(
     ),
 ) -> None:
     """Append the module config include to the `configfile` list if absent."""
-    include_line = f'"{config_file}"'
+    include_line = f"{config_file}"
 
     # Ensure the profile config exists
     if not config_path.exists():
