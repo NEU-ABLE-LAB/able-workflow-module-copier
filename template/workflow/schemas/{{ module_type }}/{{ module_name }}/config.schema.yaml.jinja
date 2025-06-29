@@ -7,6 +7,14 @@ properties:
     properties:
       {{ module_name }}:
         type: object
+        description: >-
+            The configuration for the {{ module_name }} {{ module_type }}.
+
+            This configuration is used to tell Snakemake how to run the
+            rules in the {{ module_name }} {{ module_type }} module.
+
+            For example, it can be used to specify the paths to the data
+            directories and parameters for the computed {{ module_type }}.
         properties:
           data_dirs:
             type: object
