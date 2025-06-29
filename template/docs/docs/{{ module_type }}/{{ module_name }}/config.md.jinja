@@ -7,7 +7,9 @@ This page describes how to configure the {{ module_name_long }} {{ module_type }
 {% raw %}
 ``` yaml
 {%
-    include "../../../../worklow/schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml"
+{% endraw %}
+    include "../../../../workflow/schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml"
+{% raw %}
 %}
 ```
 {% endraw %}
