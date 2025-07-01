@@ -7,12 +7,6 @@ _subdirectory: "template"
 
 # --- Questions --------------------------------------------------------------
 
-parent_project_tpl_answers_file:
-  type: str
-  help: "The path to the parent package template file."
-  default: ".copier-answers/project.yml"
-  when: False
-
 module_type:
   type: str
   help: "The type of the module to be created."
@@ -53,6 +47,12 @@ format_code:
 
 # --- Calculated Variables ---------------------------------------------------
 
+parent_project_tpl_answers_file:
+  type: str
+  help: "The path to the parent package template file."
+  default: ".copier-answers/project.yml"
+  when: False
+
 smk_file_name:
   type: str
   help: "The name of the smk file where the rule will be implemented."
@@ -67,9 +67,12 @@ _external_data:
 
 package_name:
   type: str
-  help: "The name of the project."
+  help: >-
+    The name of the project.
+
+    DO NOT CHANGE THIS VALUE FROM THE DEFAULT
+    IT SHOULD STAY IN SYNC WITH THE PARENT PROJECT TEMPLATE.
   default: "{{ _external_data.parent_projec_tpl.package_name }}"
-  when: False
 
 # --- Post-configuration -----------------------------------------------------
 
