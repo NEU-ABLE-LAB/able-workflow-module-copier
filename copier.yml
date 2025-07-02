@@ -62,6 +62,8 @@ smk_file_name:
 _answers_file: >-
   ./copier-answers/module-{{ module_type }}-{{ module_name }}.yml
 
+# --- External Data ----------------------------------------------------------
+
 _external_data:
   parent_projec_tpl: "{{ parent_project_tpl_answers_file }}"
 
