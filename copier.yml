@@ -79,6 +79,7 @@ package_name:
 # --- Post-configuration -----------------------------------------------------
 
 _skip_if_exists:
+  - "snakefmt.toml"
   - "workflow/profiles/default/config.yaml"
   - "workflow/rules/includes.smk"
 
