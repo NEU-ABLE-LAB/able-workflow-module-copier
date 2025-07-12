@@ -113,7 +113,7 @@ _tasks:
 _message_after_copy: |
   The {{ module_type }}/{{ module_name }} module has been created successfully.
 
-  See `logs/post-copier-todos/module-{{ module_type }}-{{ module_name }}.md`
+  See `.copier-answers/post-copier-todos/module-{{ module_type }}-{{ module_name }}.md`
   for next steps on implementing your rule into the project.
   You can copy-paste the contents of that file into a GitHub issue
   or a project management tool to track the implementation of the rule.
