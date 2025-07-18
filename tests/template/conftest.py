@@ -196,8 +196,6 @@ def rendered(request):
         request.config, module_copie, example.module_answers
     )
 
-    module_result = module_copie.copy(extra_answers=example.module_answers)
-
     # Smoke test the module template
     if module_result.exit_code or module_result.exception:
         pytest.fail(
