@@ -73,7 +73,6 @@ jobs:
           python -Im coverage xml -i \
               -o .cover/coverage.${{ matrix.python-version }}.xml
 
-
       - name: Upload coverage to Codecov
         if: always()
         uses: codecov/codecov-action@v5
