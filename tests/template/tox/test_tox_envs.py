@@ -1,5 +1,5 @@
 """
-Parametrise a test *dynamically* so that:
+Parametrize a test *dynamically* so that:
 
   - every answer-set (variant)          --> 'variant_id'
   - every tox env inside that variant   --> 'env_name'
