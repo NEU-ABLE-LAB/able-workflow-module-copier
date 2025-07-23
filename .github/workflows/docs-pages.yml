@@ -60,6 +60,6 @@ jobs:
 
       - name: Push changes
         # Don't deploy on forks
-        if: ${{ github.repository == 'NEU-ABLE-LAB/able-workflow-etl-copier' }}
+        if: ${{ github.repository == 'NEU-ABLE-LAB/able-workflow-module-copier' }}
         run: |
           git push origin gh-pages
