@@ -1,4 +1,4 @@
-# ABLE Workflow module Copier
+# ABLE Workflow Module Copier
 
 [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-purple.json)](https://github.com/copier-org/copier)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
@@ -6,14 +6,14 @@
 
 A [copier](https://copier.readthedocs.io/en/stable/) template for generating datasets, features, or models module for the project's python package.
 
-This template assumes that you have already created an [`able-workflow-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-copier-dev) project.
+This template assumes that you have already created an [`able-workflow-copier`]({{ able_workflow_copier_docs }}) project
 
 ## Overview of ABLE Workflow copier templates
 
-- [`able-workflow-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-copier)
-- [`able-workflow-module-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-module-copier)
-- [`able-workflow-etl-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-etl-copier)
-- [`able-workflow-rule-rule-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-rule-copier)
+- [`able-workflow-copier`]({{ able_workflow_copier_docs }})
+- [`able-workflow-module-copier`]({{ able_workflow_module_copier_docs }})
+- [`able-workflow-etl-copier`]({{ able_workflow_etl_copier_docs }})
+- [`able-workflow-rule-copier`]({{ able_workflow_rule_copier_docs }})
 
 ## Contributing
 
