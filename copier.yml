@@ -65,7 +65,7 @@ _answers_file: >-
 # --- External Data ----------------------------------------------------------
 
 _external_data:
-  parent_projec_tpl: "{{ parent_project_tpl_answers_file }}"
+  parent_project_tpl: "{{ parent_project_tpl_answers_file }}"
 
 package_name:
   type: str
