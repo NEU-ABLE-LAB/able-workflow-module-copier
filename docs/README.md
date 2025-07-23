@@ -16,7 +16,7 @@ The navigation structure is specified with
 ## Serving the documentation locally
 
     ```bash
-    ./scritps/mkdocs.sh
+    ./scripts/mkdocs.sh
     ```
 
     The assumes that you have already set up the development environment.
