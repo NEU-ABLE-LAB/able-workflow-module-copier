@@ -1,4 +1,4 @@
-# Contributing to ABLE WOrkflow Module Copier
+# Contributing to ABLE Workflow Module Copier
 
 ## Tests
 
