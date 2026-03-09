@@ -99,6 +99,7 @@ plugins:
       scripts:
         - _gen-files-scripts/render_summaries.py
   - git-revision-date-localized
+      locale: en
   - include-markdown
   - inline-select-svg
   - literate-nav:
