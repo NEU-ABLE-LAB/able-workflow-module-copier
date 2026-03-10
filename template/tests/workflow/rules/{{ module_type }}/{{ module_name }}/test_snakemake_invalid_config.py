@@ -54,4 +54,10 @@ def test_snakemake_all_data_invalid_config(workspace: Path) -> None:
 
     # Narrow assertion: make sure we failed *because* of schema validation
     stderr = excinfo.value.stderr.decode()
-    assert "ValidationError" in stderr or "Failed validating" in stderr
+    stdout = excinfo.value.stdout.decode()
+    assert (
+        ("ValidationError" in stderr)
+        or ("ValidationError" in stdout)
+        or ("Failed validating" in stderr)
+        or ("Failed validating" in stdout)
+    )
