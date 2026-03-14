@@ -1,6 +1,6 @@
 # --- Configuration ----------------------------------------------------------
 _jinja_extensions:
-  - "copier_templates_extensions.TemplateExtensionLoader"
+  - "copier_template_extensions.TemplateExtensionLoader"
   - "extensions/strict_undefined.py:SetStrictUndefined"
 
 _subdirectory: "template"
@@ -74,7 +74,7 @@ package_name:
 
     DO NOT CHANGE THIS VALUE FROM THE DEFAULT
     IT SHOULD STAY IN SYNC WITH THE PARENT PROJECT TEMPLATE.
-  # default: "{{ _external_data.parent_project_tpl.package_name }}"
+  default: "{{ _external_data.parent_project_tpl.package_name }}"
 
 # --- Post-configuration -----------------------------------------------------
 
