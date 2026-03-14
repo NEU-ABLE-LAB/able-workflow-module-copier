@@ -1,4 +1,4 @@
-name: test
+name: tox Tests
 on:
   push:
     branches: [main]
