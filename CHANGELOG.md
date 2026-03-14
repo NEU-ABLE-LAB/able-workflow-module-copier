@@ -2,10 +2,6 @@
 
 Human-readable log of changes between versions. Follows the [Common Changelog style guide](https://common-changelog.org/).
 
-## 0.1.0 - 2025-07-23
-
-Initial commit to public `able-workflow-module-copier` repository from `NEU-ABLE-LAB` private repository.
-
 ## 0.1.0-dev
 
 ## Changed
@@ -33,3 +29,7 @@ Initial commit to public `able-workflow-module-copier` repository from `NEU-ABLE
 - Fixed Copier Jinja extension loader path in `copier.yml` (`copier_template_extensions.TemplateExtensionLoader`).
 - Fixed `package_name` default wiring in `copier.yml` to pull from `_external_data.parent_project_tpl.package_name`.
 - Fixed invalid-config Snakemake test assertion to validate errors from either `stderr` or `stdout`.
+
+## 0.1.0 - 2025-07-23
+
+Initial commit to public `able-workflow-module-copier` repository from `NEU-ABLE-LAB` private repository.
