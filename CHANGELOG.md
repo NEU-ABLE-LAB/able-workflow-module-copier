@@ -6,7 +6,7 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
 
 ### Changed
 
-- Updated sandbox checkout ref in `.github/workflows/pr.yml` for `able-workflow-copier-dev` integration tests.
+- Updated sandbox checkout ref in `.github/workflows/pr.yml` for `able-workflow-copier` integration tests.
 - Updated docs site defaults in `docs/mkdocs.yml` to `neu-able-lab.github.io` URLs and configured `git-revision-date-localized` locale (`en`).
 - Updated dependency specs in `pyproject.toml` and `environment-py312-dev.yaml`:
   - `copier-templates-extensions` -> `copier-template-extensions>=0.3.3`
