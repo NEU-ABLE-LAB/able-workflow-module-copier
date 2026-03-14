@@ -4,7 +4,7 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
 
 ## 0.1.0-dev
 
-## Changed
+### Changed
 
 - Updated sandbox checkout ref in `.github/workflows/pr.yml` for `able-workflow-copier-dev` integration tests.
 - Updated docs site defaults in `docs/mkdocs.yml` to `neu-able-lab.github.io` URLs and configured `git-revision-date-localized` locale (`en`).
@@ -13,18 +13,18 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
   - `pytest-copie` (git URL) -> `pytest-copie>=0.3.1`
 - Updated Ruff config in `pyproject.toml` from `exclude` to `extend-exclude` for `template`.
 
-## Added
+### Added
 
 - Added `vcs_ref` support to test copier runs in `tests/template/conftest.py`.
 - Added template git hygiene and pinning checks in `tests/template/tox/test_tox_envs.py`:
   - fail fast when template repo is dirty
   - resolve and use immutable `HEAD` refs for package/module template rendering
 
-## Removed
+### Removed
 
 - Removed `python-envs.pythonProjects` from `.vscode/settings.json`.
 
-## Fixed
+### Fixed
 
 - Fixed Copier Jinja extension loader path in `copier.yml` (`copier_template_extensions.TemplateExtensionLoader`).
 - Fixed `package_name` default wiring in `copier.yml` to pull from `_external_data.parent_project_tpl.package_name`.
