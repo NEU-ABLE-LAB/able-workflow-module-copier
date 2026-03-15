@@ -39,7 +39,7 @@ jobs:
 
       - uses: conda-incubator/setup-miniconda@v3
         with:
-          activate-environment: able-workflow-copier
+          activate-environment: able-workflow-module-copier
           channels: conda-forge, bioconda
           channel-priority: strict
           conda-remove-defaults: "true"
