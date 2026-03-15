@@ -7,6 +7,7 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
 ### Changed
 
 - Split `pr.yml` into `main.yml` to keep codecov secrets out of PRs
+- Limited `mkdocs<2` due to breaking change in 2.0 (#26)
 
 ### Added
 
