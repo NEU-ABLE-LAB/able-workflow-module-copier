@@ -2,6 +2,18 @@
 
 Human-readable log of changes between versions. Follows the [Common Changelog style guide](https://common-changelog.org/).
 
+## dev
+
+### Changed
+
+- Split `pr.yml` into `main.yml` to keep codecov secrets out of PRs
+
+### Added
+
+### Removed
+
+### Fixed
+
 ## 0.1.1 - 2026-03-14
 
 ### Changed
