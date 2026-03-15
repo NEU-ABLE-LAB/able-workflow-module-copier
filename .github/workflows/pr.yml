@@ -40,7 +40,6 @@ jobs:
           repository: NEU-ABLE-LAB/able-workflow-copier
           ref: v0.1.1
           path: sandbox/able-workflow-copier
-          token: ${{ secrets.ABLE_REPOS_PAT }}
 
       - uses: conda-incubator/setup-miniconda@v3
         with:
