@@ -12,6 +12,7 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
   - `copier-templates-extensions` -> `copier-template-extensions>=0.3.3`
   - `pytest-copie` (git URL) -> `pytest-copie>=0.3.1`
 - Updated Ruff config in `pyproject.toml` from `exclude` to `extend-exclude` for `template`.
+- `mike` sets `mkdocs` version aliases `dev` for last commit on `main` and `latest` for last release
 
 ### Added
 
