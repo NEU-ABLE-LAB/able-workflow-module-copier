@@ -1,6 +1,6 @@
 """
 Pytest configuration that mirrors the **parent → child** rendering
-implemented in `scripts/sandbox_examples_generate.py`.
+implemented in `scripts.sandbox_examples_generate`.
 
 For each directory under `example-answers/<name>/` containing
   • `package.yml` - answers for the *package* template

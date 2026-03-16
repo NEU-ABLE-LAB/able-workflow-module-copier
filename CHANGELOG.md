@@ -8,12 +8,18 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
 
 - Split `pr.yml` into `main.yml` to keep codecov secrets out of PRs
 - Limited `mkdocs<2` due to breaking change in 2.0 (#26)
+- Enforced uniformity of scripts and tests across `able-workflow*-copier` repos
+- `sandbox_examples_generate` is now module `scripts.sandbox_examples_generate` instead of script
 
 ### Added
+
+- Refactored `copie_helpers.py` functions into their own file.
 
 ### Removed
 
 ### Fixed
+
+- typos
 
 ## 0.1.1 - 2026-03-14
 

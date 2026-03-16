@@ -1,5 +1,5 @@
 """
-Unit tests for `scripts/sandbox_examples_generate.py`.
+Unit tests for `scripts.sandbox_examples_generate`.
 
 These tests avoid running Copier for real by monkey-patching the
 `Copie` class with light stubs.
