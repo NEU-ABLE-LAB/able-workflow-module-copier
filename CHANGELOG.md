@@ -10,6 +10,7 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
 - Limited `mkdocs<2` due to breaking change in 2.0 (#26)
 - Enforced uniformity of scripts and tests across `able-workflow*-copier` repos
 - `sandbox_examples_generate` is now module `scripts.sandbox_examples_generate` instead of script
+- Synced the sandbox template snapshot with the root dry-run manifest layout (`data/tests/dry-run/`, `include:`, and `touch:`).
 
 ### Added
 
