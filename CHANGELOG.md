@@ -11,6 +11,9 @@ Human-readable log of changes between versions. Follows the [Common Changelog st
 - Enforced uniformity of scripts and tests across `able-workflow*-copier` repos
 - `sandbox_examples_generate` is now module `scripts.sandbox_examples_generate` instead of script
 - Synced the sandbox template snapshot with the root dry-run manifest layout (`data/tests/dry-run/`, `include:`, and `touch:`).
+- Consolidated `.github/workflows/pr.yml` and `.github/workflows/main.yml` into `.github/workflows/ci.yml`, with Codecov secrets only used on pushes to `main`.
+- Updated CI badge links in `README.md` and `docs/docs/index.md` to reference `.github/workflows/ci.yml`.
+- Updated contributing docs references from `.github/workflows/pr.yml` to `.github/workflows/ci.yml`.
 
 ### Added
 
