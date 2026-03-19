@@ -2,6 +2,20 @@
 
 Human-readable log of changes between versions. Follows the [Common Changelog style guide](https://common-changelog.org/).
 
+## dev
+
+### Changed
+
+### Added
+
+- Added regression test coverage for `tasks/append_config_include.py` to ensure list indentation is preserved when appending to `configfile`.
+
+### Removed
+
+### Fixed
+
+- Preserved indented YAML sequence formatting in `workflow/profiles/default/config.yaml` when `tasks/append_config_include.py` appends a config include.
+
 ## v0.1.2 - 2026-03-18
 
 ### Changed
