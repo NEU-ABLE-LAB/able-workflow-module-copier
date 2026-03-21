@@ -21,6 +21,7 @@ properties:
             properties:
               external:
                 type: string
+                default: "data/{{ module_name }}/external"
                 description: >-
                     The path to the external data directory.
 
@@ -35,6 +36,7 @@ properties:
                     workflow is run.
               interim:
                 type: string
+                default: "data/{{ module_name }}/interim"
                 description: >-
                     The path to the interim data directory.
 
@@ -49,6 +51,7 @@ properties:
                     workflow is run.
               processed:
                 type: string
+                default: "data/{{ module_name }}/processed"
                 description: >-
                     The path to the processed data directory.
 
@@ -63,6 +66,7 @@ properties:
                     workflow is run.
               raw:
                 type: string
+                default: "data/{{ module_name }}/raw"
                 description: >-
                     The path to the raw data directory.
 
@@ -82,7 +86,5 @@ properties:
               - raw
         required:
           - data_dirs
-    required:
-      - {{ module_name }}
-required:
-  - {{ module_type }}
+    required: []
+required: []
