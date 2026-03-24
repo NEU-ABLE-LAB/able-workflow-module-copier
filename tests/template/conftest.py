@@ -61,33 +61,27 @@ def _read_yaml(path: Path) -> Dict[str, Any]:
     return cast(Dict[str, Any], YAML(typ="safe").load(path.read_text()) or {})
 
 
-def _discover_examples() -> List[Example]:
-    examples: List[Example] = []
-    for answers_dir in Path("example-answers").iterdir():
+def _discover_example_dirs() -> List[Path]:
+    examples_dir = PROJECT_ROOT / "example-answers"
+    if not examples_dir.is_dir():
+        return []
+
+    example_dirs: List[Path] = []
+    for answers_dir in examples_dir.iterdir():
         if not answers_dir.is_dir():
             continue
         pkg = answers_dir / "package.yml"
         module = answers_dir / "module.yml"
         if pkg.exists() and module.exists():
-            examples.append(
-                Example(
-                    name=answers_dir.name,
-                    package_answers=_read_yaml(pkg),
-                    module_answers=_read_yaml(module),
-                )
-            )
-    if not examples:
-        raise RuntimeError(
-            "No examples found under `example-answers/` - "
-            "ensure each example has both `package.yml` and `module.yml`."
-        )
-    return examples
+            example_dirs.append(answers_dir)
+    return sorted(example_dirs)
 
 
-EXAMPLES: List[Example] = _discover_examples()
+EXAMPLE_DIRS: List[Path | None] = _discover_example_dirs() or [None]
 
-# Nice parametrisation IDs
-_example_ids = [ex.name for ex in EXAMPLES]
+
+def _example_id(example_dir: Path | None) -> str:
+    return "no-example-answers" if example_dir is None else example_dir.name
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -95,10 +89,32 @@ _example_ids = [ex.name for ex in EXAMPLES]
 # ─────────────────────────────────────────────────────────────────────────────
 
 
-@pytest.fixture(params=EXAMPLES, ids=_example_ids)
+@pytest.fixture(params=EXAMPLE_DIRS, ids=_example_id)
 def rendered(request):
     """Render an example and yield (project_dir, example_name)."""
-    example: Example = request.param
+    example_dir: Path | None = request.param
+
+    if example_dir is None:
+        pytest.fail(
+            "No examples found under `example-answers/` - ensure each example has both "
+            "`package.yml` and `module.yml`.",
+            pytrace=False,
+        )
+
+    pkg = example_dir / "package.yml"
+    module_yaml = example_dir / "module.yml"
+
+    try:
+        example = Example(
+            name=example_dir.name,
+            package_answers=_read_yaml(pkg),
+            module_answers=_read_yaml(module_yaml),
+        )
+    except (FileNotFoundError, OSError, ValueError, TypeError) as exc:
+        pytest.fail(
+            f"Failed to load example answers in {example_dir}: {exc}",
+            pytrace=False,
+        )
 
     tmp_root = Path(tempfile.mkdtemp(prefix=f"copie_{example.name}_"))
     config_file = make_copier_config(tmp_root)
