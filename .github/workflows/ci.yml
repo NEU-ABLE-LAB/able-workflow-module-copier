@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: NEU-ABLE-LAB/able-workflow-copier
-          ref: 73d06a7fc4d8757fc744cdfbda65dbda018e2324
+          ref: a8d0e3c62ec0ca5d4cb9d87f6640d1e5bb60d9d2
           path: sandbox/able-workflow-copier
 
       - uses: conda-incubator/setup-miniconda@v3
