@@ -862,12 +862,17 @@
 
 
 <h1 id="post-copy-checklist">Post-Copy Checklist<a class="headerlink" href="#post-copy-checklist" title="Permanent link">&para;</a></h1>
-<p>After running <code>copier copy</code>, see <code>.copier-answers/post-copier-todos/module-{{ module_type }}-{{ module_name }}.md</code> for next steps on implementing your rule into the project. You can copy-paste the contents of that file into a GitHub issue or a project management tool to track the implementation of the rule.</p>
+<details class="note">
+<summary>Audience: Project Developers</summary>
+<p>This checklist is for project developers adding a new module to an existing workflow project.
+It assumes you will update committed project files, tests, and documentation in the target repository.</p>
+</details>
+<p>After running <code>copier copy</code>, see <code>.copier-answers/post-copier-todos/module-{{ module_type }}-{{ module_name }}.md</code> for next steps on implementing your module in the project. You can copy-paste the contents of that file into a GitHub issue or a project management tool to track the implementation of the module.</p>
 <h2 id="post-copier-to-dos-for-the-module_type-module_name-module">Post Copier To-Do's for the <code>{{ module_type }}/{{ module_name }}</code> module<a class="headerlink" href="#post-copier-to-dos-for-the-module_type-module_name-module" title="Permanent link">&para;</a></h2>
 <p>This issue is for tracking the development of the module that was copied from the <code>able-workflow-module-copier</code> template.</p>
 <h3 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h3>
 <h4 id="required">Required<a class="headerlink" href="#required" title="Permanent link">&para;</a></h4>
-<p>No modifications should be required for the module to function. The primary functionally of the module are within the ETL processes, which are copied from the <code>able-workflow-etl-copier</code> template.</p>
+<p>No modifications should be required for the module to function. The primary functionality of the module is within the ETL processes, which are copied from the <code>able-workflow-etl-copier</code> template.</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Generate an ETL process within this module with the <a href="https://github.com/NEU-ABLE-LAB/able-workflow-etl-copier"><code>able-workflow-etl-copier</code></a> template.</li>
 </ul>
@@ -878,7 +883,7 @@
 </ul>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>workflow/profiles/</code><ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The default configuration for this module was automatically written to <code>workflow/profiles/default/config.yaml</code>. However, if you have other profiles you should include this module's configuration in those profiles as well.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The default profile already includes this module's configuration file from <code>workflow/profiles/default/config.yaml</code>. If you have other profiles, include this module's configuration file there as well.</li>
 </ul>
 </li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>config/{{ module_type }}/{{ module_name }}/config.yaml</code><ul class="task-list">
@@ -910,7 +915,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 1, 2026</span>
   </span>
 
     
