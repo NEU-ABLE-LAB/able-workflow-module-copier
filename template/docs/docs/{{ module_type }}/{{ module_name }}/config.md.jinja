@@ -10,6 +10,8 @@ This page describes the committed configuration file for the {{ module_name_long
 
 If you need to add [tabular configuration data](https://snakemake.readthedocs.io/en/stable/snakefiles/configuration.html#tabular-configuration) be sure that it is loaded along side this configuration in `workflow/profiles/default/config.yaml`.
 
+This module config is validated by `workflow/Snakefile` before rule files are included, together with all other workflow config schemas.
+
 ## Configuration file schema
 
 {% raw %}

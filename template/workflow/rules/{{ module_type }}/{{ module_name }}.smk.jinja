@@ -1,5 +1,3 @@
-validate(config, WORKFLOW_BASE / "schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml")
-
 rule {{ module_type }}_{{ module_name }}_all:
     """
     This rule will run the entire {{ module_name }} workflow
