@@ -6,7 +6,7 @@ This issue is for tracking the development of the module that was copied from th
 
 ### Required
 
-No modifications should be required for the module to function. The primary functionally of the module are within the ETL processes, which are copied from the `able-workflow-etl-copier` template.
+No modifications should be required for the module to function. The primary functionality of the module is within the ETL processes, which are copied from the `able-workflow-etl-copier` template.
 
 - [ ] Generate an ETL process within this module with the [`able-workflow-etl-copier`](https://github.com/NEU-ABLE-LAB/able-workflow-etl-copier) template.
 
@@ -15,7 +15,7 @@ No modifications should be required for the module to function. The primary func
 - [ ] `pyproject.toml`
     - [ ] Add any extra dependencies that this module requires to `runner` in the `[project.optional-dependencies]` section of `pyproject.toml`. You may not know which extra dependencies you require until you start working on the ETL processes. If those dependencies are not available on [conda-forge](https://anaconda.org/conda-forge/repo), then configure the `[tool.pyproject2conda.dependencies]` section of `pyproject.toml` to specify that they should be installed via `pip` instead of `conda`.
 - [ ] `workflow/profiles/`
-    - [ ] The default configuration for this module was automatically written to `workflow/profiles/default/config.yaml`. However, if you have other profiles you should include this module's configuration in those profiles as well.
+    - [ ] The default profile already includes this module's configuration file from `workflow/profiles/default/config.yaml`. If you have other profiles, include this module's configuration file there as well.
 - [ ] `config/{{ module_type }}/{{ module_name }}/config.yaml`
     - [ ] Add configuration options as needed.
 - [ ] `workflow/schemas/{{ module_type }}/{{ module_name }}/config.schema.yaml`
