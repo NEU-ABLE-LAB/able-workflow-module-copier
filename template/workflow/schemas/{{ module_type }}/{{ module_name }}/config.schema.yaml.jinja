@@ -4,9 +4,11 @@ description: The main configuration schema the {{ module_type }} module named {{
 properties:
   {{  module_type }}:
     type: object
+    default: {}
     properties:
       {{ module_name }}:
         type: object
+        default: {}
         description: >-
             The configuration for the {{ module_name }} {{ module_type }}.
 
@@ -18,9 +20,11 @@ properties:
         properties:
           data_dirs:
             type: object
+            default: {}
             properties:
               external:
                 type: string
+                default: "data/{{ module_name }}/external"
                 description: >-
                     The path to the external data directory.
 
@@ -35,6 +39,7 @@ properties:
                     workflow is run.
               interim:
                 type: string
+                default: "data/{{ module_name }}/interim"
                 description: >-
                     The path to the interim data directory.
 
@@ -49,6 +54,7 @@ properties:
                     workflow is run.
               processed:
                 type: string
+                default: "data/{{ module_name }}/processed"
                 description: >-
                     The path to the processed data directory.
 
@@ -63,6 +69,7 @@ properties:
                     workflow is run.
               raw:
                 type: string
+                default: "data/{{ module_name }}/raw"
                 description: >-
                     The path to the raw data directory.
 
@@ -82,7 +89,5 @@ properties:
               - raw
         required:
           - data_dirs
-    required:
-      - {{ module_name }}
-required:
-  - {{ module_type }}
+    required: []
+required: []

@@ -31,11 +31,9 @@ def create_invalid_config(
 ):
     """Create an invalid config file to test schema validation."""
 
-    # Create an invalid config file that does not follow the schema
+    # Use a hard type violation that schema defaults cannot "fix".
     invalid_config = {
-        "TOX": "tox",
-        "WORKFLOW": "workflow",
-        # Missing required fields or incorrect types can be added here
+        "LOG_DIR": 123,
     }
 
     (workspace / "config" / "config.yaml").write_text(str(invalid_config))
